@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PostMessage Dev Work</title>
+    </head>
+    <body>
+        <script src="js/nj.library.postMessage.js"></script>
+        
+        <iframe id="i_frame" src="iframe/index.html" onload="nj(this).loaded()"></iframe>
+        
+        <script>
+            nj("#i_frame").call({
+                'auth' : {
+                    'key' : '123'
+                },
+                'data' : {
+                    'item' : '123'
+                }
+            });
+        </script>
+    </body>
+</html>
